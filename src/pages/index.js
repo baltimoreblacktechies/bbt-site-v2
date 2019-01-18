@@ -7,6 +7,13 @@ import Image from '../components/image'
 const IndexPage = () => (
   <Layout>
     <h1>Black + Techie = Us</h1>
+    <a href="https://www.meetup.com/Baltimore-Black-Techies-Meetup/">
+      <button>
+        See Our Events
+      </button>
+    </a>
+    <button>Get in Touch</button>
+    <button>Find out More</button>
     <p>
       We're HYPED to host Baltimore's first Black coding meet up! Join us every
       Thursday at The Impact Hub Baltimore (10 E North Ave) to learn and code
@@ -27,13 +34,6 @@ const IndexPage = () => (
       Therefore this is an inclusive space. All are welcome.
       Please respect our goals and mission, and have fun!
     </p>
-    <a href="https://www.meetup.com/Baltimore-Black-Techies-Meetup/">
-      <button>
-        See Our Events
-      </button>
-    </a>
-    <button>Get in Touch</button>
-    <button>Find out More</button>
   </Layout>
 )
 
