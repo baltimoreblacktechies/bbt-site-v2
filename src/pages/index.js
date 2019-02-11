@@ -12,8 +12,15 @@ const Button = styled.button`
   margin: 0.2em;
   text-decoration: none;
   color: black;
+  :hover {
+    background-color: black;
+    color: white;
+  }
   :visited {
     color: black;
+    :hover {
+      color: white;
+    }
   }
 `
 
@@ -49,8 +56,8 @@ const IndexPage = () => (
       <Button as="a" href="https://www.meetup.com/Baltimore-Black-Techies-Meetup/">
         See Our Events
       </Button>
-      <Button>Get in Touch</Button>
-      <Button>Find out More</Button>
+      <Button as="a" href="#">Get in Touch</Button>
+      <Button as="a" href="#">Find out More</Button>
     </HeaderSection>
     <Section>
       We're HYPED to host Baltimore's first Black coding meet up! Join us every
