@@ -1,28 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import ButtonNav from '../components/ButtonNav'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-
-const Button = styled.button`
-  display: inline-block;
-  background: transparent;
-  border: 2px solid black;
-  padding: 0.25em 1em;
-  margin: 0.2em;
-  text-decoration: none;
-  color: black;
-  :hover {
-    background-color: black;
-    color: white;
-  }
-  :visited {
-    color: black;
-    :hover {
-      color: white;
-    }
-  }
-`
 
 const HeaderSection = styled.section`
   text-align: center;
@@ -51,13 +31,9 @@ const ListItem = styled.li`
 
 const IndexPage = () => (
   <Layout>
+    <ButtonNav />
     <HeaderSection>
       <h1>Black + Techie = Us</h1>
-      <Button as="a" href="https://www.meetup.com/Baltimore-Black-Techies-Meetup/">
-        See Our Events
-      </Button>
-      <Button as="a" href="#">Get in Touch</Button>
-      <Button as="a" href="#">Find out More</Button>
     </HeaderSection>
     <Section>
       We're HYPED to host Baltimore's first Black coding meet up! Join us every
