@@ -3,6 +3,7 @@ import ButtonNav from '../components/ButtonNav'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import bbtechies from '../images/bbtechies.jpg'
 
 const HeaderSection = styled.section`
   text-align: center;
@@ -11,6 +12,12 @@ const HeaderSection = styled.section`
 const Section = styled.section`
   margin-top: 1em;
   font-size: 1.2em;
+`
+const HeaderImage = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
 `
 
 const ListWrapper = styled.section`
@@ -35,6 +42,7 @@ const IndexPage = () => (
     <HeaderSection>
       <h1>Black + Techie = Us</h1>
     </HeaderSection>
+    <HeaderImage src={bbtechies} alt="BB Techies Image" />
     <Section>
       We're HYPED to host Baltimore's first Black coding meet up! Join us every
       Thursday at The Impact Hub Baltimore (10 E North Ave) to learn and code
@@ -42,7 +50,9 @@ const IndexPage = () => (
       ready to take your first course, we invite you to join us.
     </Section>
     <ListWrapper>
-      <ListTitle>We have four recurring nights on a rotating schedule:</ListTitle>
+      <ListTitle>
+        We have four recurring nights on a rotating schedule:
+      </ListTitle>
       <List>
         <ListItem>Speaker Night</ListItem>
         <ListItem>Study Group Night</ListItem>
