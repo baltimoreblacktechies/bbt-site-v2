@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 const ButtonNavSection = styled.section`
   text-align: center;
   padding-bottom: 1.5em;
+  width: 100%;
 `
 
 const Button = styled.button`
@@ -16,6 +17,9 @@ const Button = styled.button`
   text-decoration: none;
   color: black;
   cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
   :hover {
     background-color: black;
     color: white;
@@ -30,7 +34,7 @@ const Button = styled.button`
 
 const ButtonNav = () => (
   <ButtonNavSection>
-    <Button as="a" href="https://www.meetup.com/Baltimore-Black-Techies-Meetup/">
+    <Button as="a" href="https://www.meetup.com/Baltimore-Black-Techies-Meetup">
       See Our Events
     </Button>
     <Button as="a" href="#">Get in Touch</Button>

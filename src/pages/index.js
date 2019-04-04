@@ -17,7 +17,8 @@ const HeaderImage = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
+  width: 100%
+  height: auto;
 `
 
 const ListWrapper = styled.section`
