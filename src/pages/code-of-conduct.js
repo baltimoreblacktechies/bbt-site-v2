@@ -41,7 +41,7 @@ const CodeOfConduct = () => (
     </p>
 
     Citations:<br />
-    <a href="https://www.meetup.com/xtcnyc/pages/23924729/XTC-NYC_Code_of_Conduct/">
+    <a href="https://meetup.com/xtcnyc/pages/23924729/XTC-NYC_Code_of_Conduct">
       XTC Code of Conduct
     </a>
   </Layout>
