@@ -1,0 +1,68 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:8
+
+version: 2
+jobs:
+  pre-build:
+    working_directory: ~/bbt-site-v2
+    <<: *defaults
+    steps:
+      - checkout:
+          path: ~/bbt-site-v2/
+      - attach_workspace:
+          at: ~/bbt-site-v2/
+
+      - restore_cache:
+          key: node-v2-{{ checksum "package.json" }}-{{ arch }}
+
+      - run: npm install
+
+      - save_cache:
+          key: node-v2-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
+      - persist_to_workspace:
+          root: ~/bbt-site-v2
+          paths:
+            - node_modules
+  lint:
+    working_directory: ~/bbt-site-v2
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/bbt-site-v2
+      - run: npm run lint
+
+  gatsby-deploy:
+    working_directory: ~/bbt-site-v2
+    <<: *defaults
+    steps:
+      - checkout:
+          path: ~/bbt-site-v2/
+      - attach_workspace:
+          at: ~/bbt-site-v2
+      - run:
+          command: |
+            sudo apt-get -y -qq install awscli
+            CI=false npm run build:ci
+            aws s3 sync public/ s3://bmoreblack.tech --region us-east-1 --delete
+
+workflows:
+  version: 2
+  front-backend:
+    jobs:
+      - pre-build:
+          filters:
+            branches:
+              only:
+                - master
+      - gatsby-deploy:
+          requires:
+            - pre-build
+          filters:
+            branches:
+              only:
+                - master
