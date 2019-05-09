@@ -3,7 +3,7 @@ import ButtonNav from '../components/ButtonNav'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import bbtechies from '../images/bbtechies.jpg'
+import Image from '../components/image'
 
 const HeaderSection = styled.section`
   text-align: center;
@@ -12,13 +12,6 @@ const HeaderSection = styled.section`
 const Section = styled.section`
   margin-top: 1em;
   font-size: 1.2em;
-`
-const HeaderImage = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%
-  height: auto;
 `
 
 const ListWrapper = styled.section`
@@ -43,7 +36,7 @@ const IndexPage = () => (
     <HeaderSection>
       <h1>Black + Techie = Us</h1>
     </HeaderSection>
-    <HeaderImage src={bbtechies} alt="BB Techies Image" />
+    <Image />
     <Section>
       We're HYPED to host Baltimore's first Black coding meet up! Join us every
       Thursday at The Impact Hub Baltimore (10 E North Ave) to learn and code
