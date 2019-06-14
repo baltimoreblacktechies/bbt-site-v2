@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Image from '../components/image'
 
+import GetEvents from '../components/GetEvents'
+
 const HeaderSection = styled.section`
   text-align: center;
   padding-bottom: 1.5em;
@@ -45,14 +47,9 @@ const IndexPage = () => (
     </Section>
     <ListWrapper>
       <ListTitle>
-        We have four recurring nights on a rotating schedule:
+       These are the next 3 Upcoming Events please join us:
       </ListTitle>
-      <List>
-        <ListItem>Speaker Night</ListItem>
-        <ListItem>Study Group Night</ListItem>
-        <ListItem>Project Night </ListItem>
-        <ListItem>Networking Night</ListItem>
-      </List>
+      <GetEvents />
     </ListWrapper>
     <Section>
       We are focused on encouraging and improving representation in tech.
