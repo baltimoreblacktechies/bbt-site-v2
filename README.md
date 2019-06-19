@@ -5,10 +5,14 @@
 The Website for Baltimore Black Techies. It can be found at [http://bmoreblack.tech/](http://bmoreblack.tech).
 This website uses [GatsbyJS](https://www.gatsbyjs.org/) for static site creation, and [styled-components](https://www.styled-components.com/) for css styling.
 
+## Requirements
+* [Node.js](https://nodejs.org) (version 8.2.0 or higher) 
+
 ## Installation
 Clone the Repository
+`git clonei https://github.com/baltimoreblacktechies/bbt-site-v2.git`
 
-Install Dependencies:
+Install the Dependencies:
 ``` sh
 npm install
 ```
@@ -19,10 +23,8 @@ npm start
 ```
 
 ## Contributing
-* Clone the Repository
-```sh
-git clone https://github.com/baltimoreblacktechies/bbt-site-v2.git
-```
-
+* Fork the Repository
+* Clone the Repository on your local machine
 * Make your changes in a seperate Branch
-* Push That branch and send a PR
+* Push the branch to your forked repository
+* Create a Pull Request to `bbt-site-v2` 
