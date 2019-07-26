@@ -1,40 +1,23 @@
 import React from 'react'
 import ButtonNav from '../components/ButtonNav'
-import styled from 'styled-components'
+import {
+  Header,
+  HeaderSection,
+  Section,
+  ListWrapper,
+  ListTitle,
+  List,
+  ListItem
+} from '../components/StyledComponents'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
-
-const HeaderSection = styled.section`
-  text-align: center;
-  padding-bottom: 1.5em;
-`
-const Section = styled.section`
-  margin-top: 1em;
-  font-size: 1.2em;
-`
-
-const ListWrapper = styled.section`
-  padding-top: 1.5em;
-  text-align: center;
-`
-
-const ListTitle = styled.h2`
-  font-size: 1.2em;
-`
-const List = styled.ul`
-  list-style: none;
-`
-
-const ListItem = styled.li`
-  padding-top: 0.1em;
-`
 
 const IndexPage = () => (
   <Layout>
     <ButtonNav />
     <HeaderSection>
-      <h1>Black + Techie = Us</h1>
+      <Header centered>Black + Techie = Us</Header>
     </HeaderSection>
     <Image />
     <Section>

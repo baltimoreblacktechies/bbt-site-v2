@@ -1,12 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import ButtonNav from '../components/ButtonNav'
+import { Header } from '../components/StyledComponents'
 
 import Layout from '../components/layout'
 
-const Header = styled.h1`
-  text-align: center;
-`
 const CodeOfConduct = () => (
   <Layout>
     <ButtonNav />
