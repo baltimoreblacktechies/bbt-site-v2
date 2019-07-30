@@ -1,8 +1,8 @@
-import React from 'react'
-import ButtonNav from '../components/ButtonNav'
-import { Header } from '../components/StyledComponents'
+import React from 'react';
+import ButtonNav from '../components/ButtonNav';
+import { Header } from '../components/StyledComponents';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const CodeOfConduct = () => (
   <Layout>
@@ -36,12 +36,12 @@ const CodeOfConduct = () => (
       is being harassed, or have any other concerns, please contact an BBT
       organizer immediately, or as soon as you feel comfortable doing so.
     </p>
-
-    Citations:<br />
+    Citations:
+    <br />
     <a href="https://meetup.com/xtcnyc/pages/23924729/XTC-NYC_Code_of_Conduct">
       XTC Code of Conduct
     </a>
   </Layout>
-)
+);
 
-export default CodeOfConduct
+export default CodeOfConduct;
