@@ -10,7 +10,7 @@ This website uses [GatsbyJS](https://www.gatsbyjs.org/) for static site creation
 
 ## Installation
 Clone the Repository
-`git clonei https://github.com/baltimoreblacktechies/bbt-site-v2.git`
+`git clone https://github.com/baltimoreblacktechies/bbt-site-v2.git`
 
 Install the Dependencies:
 ``` sh
