@@ -28,13 +28,11 @@ const IndexPage = () => (
     </Section>
     <ListWrapper>
       <ListTitle>
-        We have four recurring nights on a rotating schedule:
+        We have two recurring nights on a rotating schedule:
       </ListTitle>
       <List>
         <ListItem>Speaker Night</ListItem>
-        <ListItem>Study Group Night</ListItem>
-        <ListItem>Project Night </ListItem>
-        <ListItem>Networking Night</ListItem>
+        <ListItem>Workshop Night </ListItem>
       </List>
     </ListWrapper>
     <Section>
