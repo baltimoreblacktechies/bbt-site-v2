@@ -48,7 +48,7 @@ jobs:
           command: |
             sudo apt-get -y -qq install awscli
             CI=false npm run build:ci
-            aws s3 sync public/ s3://www.bmoreblack.tech --region us-east-1 --delete
+            aws s3 sync public/ s3://bmore-techie --region us-east-1 --delete
 
 workflows:
   version: 2
