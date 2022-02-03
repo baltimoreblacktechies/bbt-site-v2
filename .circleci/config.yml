@@ -5,7 +5,9 @@ defaults: &defaults
         username: $DOCKERHUB_USERNAME
         password: $DOCKERHUB_PASSWORD
 
-version: 2
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@2.0.6
 jobs:
   pre-build:
     working_directory: ~/bbt-site-v2
@@ -39,7 +41,7 @@ jobs:
           at: ~/bbt-site-v2
       - run: npm run lint
 
-  gatsby-deploy:
+  gatsby-build:
     working_directory: ~/bbt-site-v2
     <<: *defaults
     steps:
@@ -49,9 +51,22 @@ jobs:
           at: ~/bbt-site-v2
       - run:
           command: |
-            sudo apt-get update && apt-get install -y awscli 
             CI=false npm run build:ci
-            aws s3 sync public/ s3://bmore-techie --region us-east-1 --delete
+      - persist_to_workspace:
+          root: ~/bbt-site-v2
+          paths:
+            - public
+
+   gatsby-deploy:
+     executor: aws-cli/default
+     steps:
+      - attach_workspace:
+          at: ~/bbt-site-v2
+      - aws-cli/setup:
+          profile-name: default
+      - run:
+          name: Upload file to s3
+          command: aws s3 sync public/ s3://bmore-techie --region us-east-1 --delete
 
 workflows:
   version: 2
@@ -62,9 +77,16 @@ workflows:
             branches:
               only:
                 - main
-      - gatsby-deploy:
+      - gatsby-build:
           requires:
             - pre-build
+           filters:
+             branches:
+               only:
+                 - main
+      - gatsby-deploy:
+          requires:
+            - gatsby-build
           filters:
             branches:
               only:
