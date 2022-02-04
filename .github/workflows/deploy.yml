@@ -28,4 +28,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to s3
-        run: aws s3 sync public/ s3://bmore-techie
+        run: aws s3 sync ./public/ s3://bmore-techie --delete
